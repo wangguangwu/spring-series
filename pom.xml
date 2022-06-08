@@ -20,6 +20,7 @@
         <!--指定生成的 class 文件与哪个版本的虚拟机进行兼容，maven 编译时会用到这个配置，相当于 javac 命令后的 -target 参数-->
         <maven.compiler.target>8</maven.compiler.target>
         <spring.version>5.3.20</spring.version>
+        <lombok.version>1.18.24</lombok.version>
     </properties>
 
     <dependencyManagement>
@@ -38,6 +39,11 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-beans</artifactId>
                 <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+<!--不指定 bean 的 id 和 name-->
+    <bean class="com.wangguangwu.demo2.UserModel"/>
+    <bean class="com.wangguangwu.demo2.UserModel"/>
+
+    <bean class="java.lang.String"/>
+    <bean class="java.lang.String"/>
+
+</beans>
