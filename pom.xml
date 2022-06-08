@@ -6,11 +6,40 @@
 
     <groupId>com.wangguangwu</groupId>
     <artifactId>spring-series</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>lesson-001</module>
+    </modules>
 
     <properties>
+        <!--配置 maven 编译时采用的编译器版本-->
+        <maven.compiler.compilerVersion>8</maven.compiler.compilerVersion>
+        <!--指定源代码时什么版本，如果源码与这个版本不符合将报错，相当于 javac 命令后的 -source 参数-->
         <maven.compiler.source>8</maven.compiler.source>
+        <!--指定生成的 class 文件与哪个版本的虚拟机进行兼容，maven 编译时会用到这个配置，相当于 javac 命令后的 -target 参数-->
         <maven.compiler.target>8</maven.compiler.target>
+        <spring.version>5.3.20</spring.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
