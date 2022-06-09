@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Client2 {
 
     public static void main(String[] args) {
-        // 1. 获取 bean.xml
+        // 1. 获取 bean1.xml
         String beanXml = "classpath:/com/wangguangwu/demo2/bean2.xml";
 
         // 2. 创建 ClassPathXmlApplicationContext 容器，给容器指定需要加载的 bean 配置文件

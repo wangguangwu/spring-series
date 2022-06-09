@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <!--定义一个工厂实例-->
+    <bean id="userFactory" class="com.wangguangwu.demo3.UserFactory"/>
+
+    <!--通过 userFactory 实例的无参构造方法创建对象-->
+    <bean id="createBeanByBeanMethod1" factory-bean="userFactory" factory-method="buildUser1"/>
+
+    <!--通过 userFactory 实例的有参构造方法创建对象-->
+    <bean id="createBeanByBeanMethod2" factory-bean="userFactory" factory-method="buildUser2">
+        <constructor-arg index="0" value="通过bean实例有参方法创建UserModel实例对象"/>
+        <constructor-arg index="1" value="30"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <!--默认构造方法创建-->
+    <bean id="createBeanByConstructor1" class="com.wangguangwu.demo3.UserModel"/>
+    <!--有参构造方法创建-->
+    <bean id="createBeanByConstructor2" class="com.wangguangwu.demo3.UserModel">
+        <constructor-arg index="0" value="我是通过 userModel 的有参方法构造的对象！"/>
+        <constructor-arg index="1" value="30"/>
+    </bean>
+
+</beans>

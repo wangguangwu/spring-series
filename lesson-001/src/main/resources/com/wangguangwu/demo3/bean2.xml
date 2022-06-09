@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <!--通过静态无参方法创建 bean 对象-->
+    <bean id="createBeanByStaticFactoryMethod1" class="com.wangguangwu.demo3.UserStaticFactory"
+          factory-method="buildUser1"/>
+
+    <!--通过工厂静态有参方法创建 bean 对象-->
+    <bean id="createBeanByStaticFactoryMethod2" class="com.wangguangwu.demo3.UserStaticFactory"
+          factory-method="buildUser2">
+        <constructor-arg index="0" value="通过工厂静态有参方法创建 UserModel 实例对象"/>
+        <constructor-arg index="1" value="30"/>
+    </bean>
+
+</beans>
