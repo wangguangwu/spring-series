@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <bean id="user" class="com.wangguangwu.demo5.UserModel"/>
+
+    <!--通过构造器方式注入容器中的 bean-->
+    <bean id="diBeanByConstructor" class="com.wangguangwu.demo5.PersonModel">
+        <!--通过 ref 引用容器中定义的其他 bean-->
+        <constructor-arg index="0" ref="user"/>
+        <constructor-arg index="1">
+            <!--通过内置 bean-->
+            <bean class="com.wangguangwu.demo5.CarModel">
+                <constructor-arg index="0" value="byd"/>
+                <constructor-arg index="1" value="build your dream"/>
+            </bean>
+        </constructor-arg>
+    </bean>
+
+    <!--通过 setter 方法注入容器中的 bean-->
+    <bean id="diBeanBySetter" class="com.wangguangwu.demo5.PersonModel">
+        <!--通过 ref 引用容器中定义的其他 bean-->
+        <property name="userModel" ref="user"/>
+        <property name="carModel">
+            <!--通过内置 bean-->
+            <bean class="com.wangguangwu.demo5.CarModel">
+                <constructor-arg index="0" value="tesla"/>
+                <constructor-arg index="1" value="model3"/>
+            </bean>
+        </property>
+    </bean>
+
+</beans>

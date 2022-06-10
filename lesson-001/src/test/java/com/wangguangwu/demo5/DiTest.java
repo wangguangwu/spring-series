@@ -54,13 +54,20 @@ public class DiTest {
         test(beanXml, "diBySetter");
     }
 
+    @Test
+    public void diBean() {
+        String beanXml = "classpath:/com/wangguangwu/demo5/diBean.xml";
+        test(beanXml, "diBeanByConstructor", "diBeanBySetter");
+    }
 
     //=============================私有方法=====================================
 
-    private void test(String beanXml, String beanName) {
+    private void test(String beanXml, String... beanName) {
         ClassPathXmlApplicationContext context = IoUtils.context(beanXml);
         Assertions.assertNotNull(context, "获取 spring 容器失败");
-        System.out.println(context.getBean(beanName));
+        for (String s : beanName) {
+            System.out.println(context.getBean(s));
+        }
     }
 
 }
