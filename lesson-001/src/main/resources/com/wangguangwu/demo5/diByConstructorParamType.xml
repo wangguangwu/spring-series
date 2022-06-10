@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <!--根据构造器参数类型注入-->
+    <!--相当于：UserModel userModel = new UserModel(30, "Hello World", "我是通过构造器参数类型注入的")-->
+    <bean id="diByConstructorParamType" class="com.wangguangwu.demo5.UserModel">
+        <constructor-arg type="int" value="30"/>
+        <constructor-arg type="java.lang.String" value="Hello World"/>
+        <constructor-arg type="java.lang.String" value="我是通过构造器参数类型注入的"/>
+    </bean>
+
+</beans>

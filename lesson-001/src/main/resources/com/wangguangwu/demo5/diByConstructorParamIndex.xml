@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <!--通过构造器参数的索引注入-->
+    <!--类似于：UserModel userModel = new UserModel("Hello World", "我是通过构造器参数位置注入的")-->
+    <bean id="diByConstructorParamIndex" class="com.wangguangwu.demo5.UserModel">
+        <!--spring 内部会自动将 value 的值转换为对象的实际类型-->
+        <constructor-arg index="0" value="Hello World"/>
+        <constructor-arg index="1" value="我是通过构造器参数位置注入的"/>
+    </bean>
+
+</beans>

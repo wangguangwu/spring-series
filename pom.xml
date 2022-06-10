@@ -23,6 +23,7 @@
         <lombok.version>1.18.24</lombok.version>
         <junit.version>4.13.2</junit.version>
         <jupiter.version>5.8.2</jupiter.version>
+        <fastjson.version>2.0.3</fastjson.version>
     </properties>
 
     <dependencyManagement>
@@ -58,6 +59,11 @@
                 <artifactId>junit-jupiter-api</artifactId>
                 <version>${jupiter.version}</version>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

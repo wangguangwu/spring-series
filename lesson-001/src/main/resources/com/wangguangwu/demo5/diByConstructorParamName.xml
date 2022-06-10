@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <!--根据构造器参数名称注入-->
+    <bean id="diByConstructorParamName" class="com.wangguangwu.demo5.UserModel">
+        <constructor-arg name="age" value="30"/>
+        <constructor-arg name="name" value="test"/>
+        <constructor-arg name="desc" value="test_test"/>
+    </bean>
+
+</beans>
