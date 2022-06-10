@@ -60,6 +60,13 @@ public class DiTest {
         test(beanXml, "diBeanByConstructor", "diBeanBySetter");
     }
 
+    @Test
+    public void diOtherType() {
+        String beanXml = "classpath:/com/wangguangwu/demo5/diOtherType.xml";
+        test(beanXml, "diOtherType");
+    }
+
+
     //=============================私有方法=====================================
 
     private void test(String beanXml, String... beanName) {
