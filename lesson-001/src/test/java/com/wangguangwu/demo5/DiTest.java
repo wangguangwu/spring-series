@@ -72,8 +72,8 @@ public class DiTest {
     private void test(String beanXml, String... beanName) {
         ClassPathXmlApplicationContext context = IoUtils.context(beanXml);
         Assertions.assertNotNull(context, "获取 spring 容器失败");
-        for (String s : beanName) {
-            System.out.println(context.getBean(s));
+        for (String name : beanName) {
+            System.out.println(name + ":" + context.getBean(name));
         }
     }
 

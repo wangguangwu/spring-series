@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <bean id="service1" class="com.wangguangwu.demo6.DiAutowire$Service1">
+        <property name="desc" value="service1"/>
+    </bean>
+
+    <bean id="service2" class="com.wangguangwu.demo6.DiAutowire$Service2">
+        <property name="desc" value="service2"/>
+    </bean>
+
+    <bean id="service2-1" class="com.wangguangwu.demo6.DiAutowire$Service2">
+        <property name="desc" value="service2-1"/>
+    </bean>
+
+    <!--autowire：byName，根据 name 自动注入-->
+    <bean id="diAutowireByName1" class="com.wangguangwu.demo6.DiAutowire" autowire="byName"/>
+
+    <!--当配置了自动注入，还是可以使用手动的方式自动注入进行覆盖-->
+    <bean id="diAutowireByName2" class="com.wangguangwu.demo6.DiAutowire" autowire="byName">
+        <property name="service2" ref="service2-1"/>
+    </bean>
+
+</beans>
