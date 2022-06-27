@@ -12,7 +12,7 @@ public class Client {
     public static void main(String[] args) {
         // 1. bean 配置文件位置
         // 在 resource 目录下创建文件夹，需要按顺序依次创建
-        String beanXml = "classpath:/com/wangguangwu/demo1/bean1.xml";
+        String beanXml = "classpath:/com/wangguangwu/demo1/bean.xml";
 
         // 2. 创建 ClassPathXmlApplicationContext 容器，给容器指定需要加载的 bean 配置文件
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(beanXml);
